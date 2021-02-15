@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws-eks-helper = {
-      source  = "glints/aws-eks-helper"
+      source  = "glints-dev/aws-eks-helper"
       version = "0.1.0"
     }
   }
