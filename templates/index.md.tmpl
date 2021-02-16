@@ -13,4 +13,16 @@ The AWS EKS Helper provider provides helper resources to interact with Amazon EK
 
 {{tffile "examples/provider/provider.tf"}}
 
+## Authenticating
+
+This provider uses the AWS SDK for Go, and therefore also supports the same
+means for specifying credentials. More information can be found at the
+[Specifying Credentials](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials)
+section of the AWS SDK for Go Developer Guide.
+
+In most cases, the variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
+can be specified.
+
+This provider requires the `DescribeInstanceTypes` IAM permission.
+
 {{ .SchemaMarkdown | trimspace }}
