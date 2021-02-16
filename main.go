@@ -23,7 +23,7 @@ func main() {
 		ProviderFunc: func() *schema.Provider {
 			return &schema.Provider{
 				DataSourcesMap: map[string]*schema.Resource{
-					"kube_reserved": dataSourceKubeReserved(),
+					"aws-eks-helper_kube_reserved": dataSourceKubeReserved(),
 				},
 			}
 		},
