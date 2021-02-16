@@ -23,7 +23,7 @@ func main() {
 		ProviderFunc: func() *schema.Provider {
 			return &schema.Provider{
 				DataSourcesMap: map[string]*schema.Resource{
-					"aws_eks_helper_kube_reserved": dataSourceKubeReserved(),
+					"kube_reserved": dataSourceKubeReserved(),
 				},
 			}
 		},
@@ -32,7 +32,7 @@ func main() {
 
 func dataSourceKubeReserved() *schema.Resource {
 	return &schema.Resource{
-		Description: "`aws_eks_helper_kube_reserved` data source can be used to retrieve resources that should be reserved by Kubernetes for a given instance type.",
+		Description: "`aws-eks-helper_kube_reserved` data source can be used to retrieve resources that should be reserved by Kubernetes for a given instance type.",
 		ReadContext: dataSourceKubeReservedRead,
 		Schema: map[string]*schema.Schema{
 			"instance_type": {
