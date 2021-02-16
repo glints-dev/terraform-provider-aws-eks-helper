@@ -60,6 +60,11 @@ func dataSourceKubeReserved() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"max_pods": {
+				Description: "The maximum number of pods that should be scheduled.",
+				Type:        schema.TypeInt,
+				Computed:    true,
+			},
 		},
 	}
 }
@@ -103,6 +108,10 @@ func dataSourceKubeReservedRead(
 	}
 
 	if err := d.Set("storage", instanceTypeInfo.DefaultStorageToReserve()); err != nil {
+		return diag.FromErr(err)
+	}
+
+	if err := d.Set("max_pods", instanceTypeInfo.MaxPodsPerNode); err != nil {
 		return diag.FromErr(err)
 	}
 

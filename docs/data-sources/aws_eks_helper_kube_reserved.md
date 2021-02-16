@@ -27,6 +27,7 @@ description: |-
 ### Read-Only
 
 - **cpu** (String) The amount of CPU (in milli-cores) that should be reserved.
+- **max_pods** (Number) The maximum number of pods that should be scheduled.
 - **memory** (String) The amount of memory (in Mi) that should be reserved.
 - **storage** (String) The amount of storage (in Gi) that should be reserved.
 
