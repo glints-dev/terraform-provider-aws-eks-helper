@@ -5,7 +5,7 @@ This repository provides helper data sources for use with [Amazon EKS](https://a
 ## Requirements
 
 - [Terraform](https://www.terraform.io/downloads.html) >= 0.13.x
-- [Go](https://golang.org/doc/install) >= 1.15
+- [Go](https://golang.org/doc/install) >= 1.18
 
 ## Building The Provider
 
